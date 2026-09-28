@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Freelance IT support in Ocala, FL and nationwide by remote. Friendly, honest tech help: troubleshooting, setup, and monthly support with Covenant Care.">
+<title>Covenant Tech Services — Practical Tech Support Without the Confusion</title>
+<style>
+  :root{
+    --crimson: #7C1128;
+    --crimson-deep: #4A0A18;
+    --gold: #C9A227;
+    --gold-light: #E6C65C;
+    --black: #17130F;
+    --cream: #FAF5EA;
+    --ink: #241B14;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  img{ max-width:100%; display:block; }
+
+  .container{
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  a.btn{
+    display:inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-weight:bold;
+    font-family: Georgia, serif;
+    text-decoration:none;
+    padding: 14px 30px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  a.btn:hover{ transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.3); }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+  }
+  .hero-logo{
+    background: var(--cream);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 40px;
+  }
+  .hero-logo img{ max-width: 380px; }
+
+  .hero-copy{
+    background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-deep) 100%);
+    color: var(--cream);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding: 50px 60px;
+  }
+
+  .hero-copy h1{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 42px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+
+  .hero-copy .kicker{
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--gold-light);
+    font-size: 16px;
+    margin-bottom: 26px;
+  }
+
+  .hero-copy .service-area{
+    font-size: 14.5px;
+    color: #EAD9C9;
+    margin-bottom: 26px;
+    line-height: 1.6;
+  }
+
+  .gold-rule{
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about{
+    background: var(--cream);
+    padding: 60px;
+    display:grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items:start;
+  }
+
+  .about img{
+    border-radius: 6px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .about .caption{
+    text-align:center;
+    font-family: Georgia, serif;
+    font-weight:bold;
+    color: var(--crimson-deep);
+    margin-top: 12px;
+  }
+  .about .caption span{
+    display:block;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 13px;
+    color: #6b5a4a;
+    margin-top: 2px;
+  }
+
+  .about h2{
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: var(--crimson);
+    margin-bottom: 8px;
+  }
+
+  .about .underline{
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 20px;
+  }
+
+  .about p{
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  /* ---------- SERVICES ---------- */
+  .services{
+    background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-deep) 100%);
+    color: var(--cream);
+    padding: 60px;
+  }
+
+  .services h2{
+    font-family: Georgia, serif;
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .services .underline{
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 30px;
+  }
+
+  .service-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 50px;
+  }
+
+  .service-card .icon{
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .service-card h3{
+    font-family: Georgia, serif;
+    font-size: 17px;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .service-card p{
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #EAD9C9;
+  }
+
+  /* ---------- PRICING PREVIEW ---------- */
+  .pricing-preview{
+    background: var(--cream);
+    padding: 60px;
+    text-align:center;
+  }
+
+  .pricing-preview h2{
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: var(--crimson);
+  }
+
+  .pricing-preview .underline{
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin: 8px auto 20px;
+  }
+
+  .pricing-preview p{
+    max-width: 560px;
+    margin: 0 auto 26px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  .price-strip{
+    display:flex;
+    justify-content:center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .price-chip{
+    background: rgba(201,162,39,0.14);
+    border-left: 4px solid var(--gold);
+    padding: 14px 22px;
+    text-align:left;
+    min-width: 200px;
+  }
+
+  .price-chip .svc{
+    font-weight:bold;
+    color: var(--crimson-deep);
+    font-size: 14.5px;
+  }
+
+  .price-chip .rate{
+    font-family: Georgia, serif;
+    font-weight:bold;
+    color: var(--crimson);
+    font-size: 18px;
+    margin-top: 4px;
+  }
+
+
+  /* ---------- TIERS ---------- */
+  .tiers{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; max-width:1000px; margin:0 auto 22px; text-align:left; }
+  .tier{ background:#fff; border-top:4px solid var(--gold); border-radius:6px; padding:24px 22px; box-shadow:0 6px 20px rgba(0,0,0,0.08); }
+  .tier.featured{ background:var(--crimson-deep); color:var(--cream); border-top-color:var(--gold-light); }
+  .tier .say{ font-family:Georgia,serif; font-style:italic; color:var(--crimson); font-size:14px; }
+  .tier.featured .say{ color:var(--gold-light); }
+  .tier h3{ font-family:Georgia,serif; font-size:21px; margin:2px 0 4px; }
+  .tier .rate{ font-family:Georgia,serif; font-weight:bold; font-size:18px; color:var(--crimson); margin-bottom:10px; }
+  .tier.featured .rate{ color:var(--gold-light); }
+  .tier p, .tier li{ font-size:14px; line-height:1.55; margin:0 0 8px; max-width:none; }
+  .tier ul{ padding-left:18px; }
+  .fine{ font-size:13px !important; color:#6b5a4a; max-width:640px; }
+
+  /* ---------- AVAILABILITY ---------- */
+  .availability{
+    background: var(--black);
+    color: var(--cream);
+    padding: 60px;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items:center;
+  }
+
+  .availability h2{
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  .availability .underline{
+    width: 70px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  .hours-row{
+    display:flex;
+    gap: 50px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  .hours-row .day{
+    font-family: Georgia, serif;
+    color: var(--gold-light);
+    font-weight:bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .hours-row .time{
+    font-size: 15px;
+  }
+
+  .availability .note{
+    font-size: 13.5px;
+    color: #C9BBA9;
+    margin-bottom: 22px;
+  }
+
+  .contact-line{
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .contact-line b{ color: var(--gold-light); }
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    background: var(--crimson-deep);
+    color: #EAD9C9;
+    text-align:center;
+    padding: 26px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 13.5px;
+  }
+  .footer .cite{
+    display:block;
+    font-style:normal;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 6px;
+    font-weight:bold;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 800px){
+    .hero{ grid-template-columns: 1fr; }
+    .about{ grid-template-columns: 1fr; padding: 40px 28px; }
+    .about img{ max-width: 260px; margin: 0 auto; }
+    .services{ padding: 40px 28px; }
+    .service-grid{ grid-template-columns: 1fr; }
+    .tiers{ grid-template-columns: 1fr; }
+    .pricing-preview{ padding: 40px 28px; }
+    .availability{ grid-template-columns: 1fr; padding: 40px 28px; text-align:left; }
+    .hero-copy{ padding: 40px 28px; }
+    .hero-logo{ padding: 30px; }
+    .hero-copy h1{ font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-logo">
+      <img src="assets/logo.png" alt="Covenant Tech Services logo">
+    </div>
+    <div class="hero-copy">
+      <div class="kicker">Covenant Tech Services · Freelance IT Help</div>
+      <h1>Practical Tech Support Without the Confusion</h1>
+      <div class="service-area">🌐 Remote support available nationwide &nbsp;·&nbsp; 📍 On-site in Ocala &amp; certain surrounding areas</div>
+      <div>
+        <a class="btn" href="mailto:ctsbizian25@gmail.com">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+  <div class="gold-rule"></div>
+
+  <!-- ABOUT -->
+  <div class="about">
+    <div>
+      <img src="assets/ian.png" alt="Ian Canales">
+      <div class="caption">Ian Canales<span>Freelance IT Help, Powered by Faith</span></div>
+    </div>
+    <div>
+      <h2>About Me</h2>
+      <div class="underline"></div>
+      <p>Hi, I'm Ian — a freelance IT helper with a passion for technology, working under the name Covenant Tech Services. This started as a way to put my skills to good use helping neighbors, friends, and small local businesses, and I'm growing it one client at a time.</p>
+      <p>I'm CompTIA A+ and Network+ certified and fluent in English and Spanish — <i>se habla español</i>.</p>
+      <p>My goal is simple: help people solve technology problems without unnecessary complexity or confusion — treating every job with the same honesty and care I'd want if it were my own computer.</p>
+      <p>I currently take on projects after hours, offering remote support nationwide and on-site visits around Ocala and certain surrounding areas. If you need a hand, reach out — no job too small.</p>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services">
+    <div class="container">
+      <h2>What I Can Help With</h2>
+      <div class="underline"></div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="icon">💻</div>
+          <h3>COMPUTER TROUBLESHOOTING</h3>
+          <p>Diagnosis and support for slow computers, software issues, crashes, and general system performance problems.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🌐</div>
+          <h3>NETWORK & WI-FI SUPPORT</h3>
+          <p>Basic network troubleshooting, Wi-Fi setup, connectivity issues, and internet performance assistance.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">📧</div>
+          <h3>MICROSOFT 365 SUPPORT</h3>
+          <p>Help with Outlook, account setup, password issues, email troubleshooting, and basic Microsoft 365 administration.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🛡️</div>
+          <h3>TECH ADVICE & GUIDANCE</h3>
+          <p>Friendly, practical technology guidance for individuals and small businesses — from security tips to picking the right setup.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🖨️</div>
+          <h3>DEVICE SETUP & PRINTERS</h3>
+          <p>New computer or Mac setup, printer and scanner problems, and moving your files over safely.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🧹</div>
+          <h3>VIRUS CLEANUP & BACKUPS</h3>
+          <p>Malware and pop-up cleanup, plus simple backups so one bad day doesn't cost you your photos or files.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRICING PREVIEW -->
+  <div class="pricing-preview">
+    <h2>Simple, Upfront Pricing</h2>
+    <div class="underline"></div>
+    <p>Pick what fits. No surprise invoices — you'll know the cost before we start.</p>
+    <div class="tiers">
+      <div class="tier">
+        <div class="say">Fix it</div>
+        <h3>Tech Assist</h3>
+        <div class="rate">$35/hr <span style="font-weight:normal;font-size:14px">remote</span><br>$50/hr <span style="font-weight:normal;font-size:14px">on-site (Ocala &amp; certain surrounding areas)</span></div>
+        <p>One-off problems: a slow computer, Wi-Fi that keeps dropping, an email you're locked out of. You pay only for the time it takes.</p>
+      </div>
+      <div class="tier">
+        <div class="say">Set it up</div>
+        <h3>Business Ready</h3>
+        <div class="rate">Flat quote upfront</div>
+        <p>Getting it right the first time: a new computer, Microsoft 365 and email, secure Wi-Fi, and a password manager. You get a simple checklist when it's done.</p>
+      </div>
+      <div class="tier featured">
+        <div class="say">Keep it running</div>
+        <h3>Covenant Care</h3>
+        <div class="rate">$95/month</div>
+        <ul>
+          <li>Direct line to me by email or text, answered within one business day</li>
+          <li>Up to 2 hours of remote support each month</li>
+          <li>Monthly check-up: updates, backups, and security basics</li>
+          <li>$40/hr on-site rate</li>
+          <li>Extra time at $35/hr</li>
+        </ul>
+      </div>
+    </div>
+    <p class="fine">Covenant Care doesn't cover new equipment purchases, large projects, or after-hours emergencies. Those are quoted separately.</p>
+    <a class="btn" href="mailto:ctsbizian25@gmail.com">Ask About Your Project</a>
+  </div>
+
+  <!-- AVAILABILITY -->
+  <div class="availability">
+    <div>
+      <h2>Support Availability</h2>
+      <div class="underline"></div>
+      <div class="hours-row">
+        <div>
+          <div class="day">Monday – Friday</div>
+          <div class="time">6:00 PM – 8:00 PM</div>
+        </div>
+        <div>
+          <div class="day">Saturday</div>
+          <div class="time">9:00 AM – 12:00 PM</div>
+        </div>
+      </div>
+      <div class="note">*Remote support available nationwide by appointment. On-site visits limited to Ocala &amp; certain surrounding areas — not sure if you're in range? Just ask.</div>
+      <div class="contact-line"><b>Email:</b> ctsbizian25@gmail.com</div>
+      <div class="contact-line"><b>Facebook:</b> Covenant Tech Services</div>
+      <div class="contact-line"><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ifmcittech/" style="color:var(--gold-light)">linkedin.com/in/ifmcittech</a></div>
+    </div>
+    <a class="btn" href="mailto:ctsbizian25@gmail.com">Say Hello</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    "Commit to the LORD whatever you do, and He will establish your plans."
+    <span class="cite">Proverbs 16:3 · Technology with Purpose · Leading with Faith</span>
+  </div>
+
+</body>
+</html>
